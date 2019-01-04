@@ -284,14 +284,4 @@ const CanvasTinter = {
 
 CanvasTinter.tintMethod = CanvasTinter.canUseMultiply ? CanvasTinter.tintWithMultiply : CanvasTinter.tintWithPerPixel;
 
-/**
- * The tintMethod type.
- *
- * @memberof PIXI.CanvasTinter
- * @callback tintMethodFunctionType
- * @param texture {PIXI.Texture} the texture to tint
- * @param color {number} the color to use to tint the sprite with
- * @param canvas {HTMLCanvasElement} the current canvas
- */
-
 export default CanvasTinter;

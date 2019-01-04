@@ -4,9 +4,7 @@ declare namespace PIXI {
         progress: number;
         loading: boolean;
         defaultQueryString: string;
-
         resources: IResourceDictionary;
-
         concurrency: number;
 
         add(...params: any[]): this;
@@ -42,15 +40,14 @@ declare namespace PIXI {
     }
 
     export interface IResourceDictionary {
-        [index: string]: PIXI.loaders.Resource;
+        [index: string]: LoaderResource;
     }
 
     export interface ITextureDictionary {
-        [index: string]: PIXI.Texture;
+        [index: string]: Texture;
     }
 
     export interface ILoaderOptions {
-
         crossOrigin?: boolean | string;
         loadType?: number;
         xhrType?: string;
@@ -59,7 +56,6 @@ declare namespace PIXI {
             skipSource?: boolean;
             mimeType?: string | string[];
         };
-
     }
 
     export interface LoaderResource {
@@ -76,7 +72,6 @@ declare namespace PIXI {
         children: LoaderResource[];
         type: number;
         progressChunk: number;
-
         isDataUrl: boolean;
         isComplete: boolean;
         isLoading: boolean;
@@ -84,7 +79,6 @@ declare namespace PIXI {
         abort(message?: string): void;
         //tslint:disable-next-line:ban-types forbidden-types
         load(cb?: Function): void;
-
         texture: Texture;
         spineAtlas: any;
         spineData: any;

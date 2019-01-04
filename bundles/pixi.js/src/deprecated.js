@@ -487,7 +487,7 @@ export default function deprecated(PIXI)
     /**
      * @class PIXI.extract.WebGLExtract
      * @deprecated since 5.0.0
-     * @see PIXI.extract.Prepare
+     * @see PIXI.extract.Extract
      */
     Object.defineProperty(PIXI.extract, 'WebGLExtract', {
         get()
