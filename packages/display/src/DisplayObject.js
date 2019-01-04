@@ -27,7 +27,7 @@ export default class DisplayObject extends EventEmitter
          * World transform and local transform of this object.
          * This will become read-only later, please do not assign anything there unless you know what are you doing.
          *
-         * @member {PIXI.TransformBase}
+         * @member {PIXI.Transform}
          */
         this.transform = new Transform();
 

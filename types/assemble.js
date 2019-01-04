@@ -43,8 +43,14 @@ if (bundle === 'pixi.js') {
     // Strip the CanvasRenderer from the default typings
     buffer = buffer
         .replace(/PIXI\.CanvasRenderer \| (PIXI\.Renderer)/g, '$1')
-        .replace(/(PIXI\.Renderer) \| PIXI\.CanvasRenderer/g, '$1');
+        .replace(/(PIXI\.Renderer) \| PIXI\.CanvasRenderer/g, '$1')
+        .replace(/PIXI\.prepare\.CanvasPrepare \| (PIXI\.Renderer)/g, '$1');
 }
+
+// Fixes a bug in tsd-jsdoc where order of access is wrong
+buffer = buffer
+    .replace(/(static) (protected)/g, '$2 $1')
+    .replace(/(readonly) (static)/g, '$2 $1');
 
 // EventEmitter3 and resource-loader are external dependencies, we'll
 // inject these into the find output

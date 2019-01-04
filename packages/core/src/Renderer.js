@@ -411,9 +411,9 @@ export default class Renderer extends AbstractRenderer
      * @type {object}
      * @readonly
      * @property {PIXI.accessibility.AccessibilityManager} accessibility Support tabbing interactive elements.
-     * @property {PIXI.extract.WebGLExtract} extract Extract image data from renderer.
+     * @property {PIXI.extract.Extract} extract Extract image data from renderer.
      * @property {PIXI.interaction.InteractionManager} interaction Handles mouse, touch and pointer events.
-     * @property {PIXI.prepare.WebGLPrepare} prepare Pre-render display objects.
+     * @property {PIXI.prepare.Prepare} prepare Pre-render display objects.
      */
 
     /**
